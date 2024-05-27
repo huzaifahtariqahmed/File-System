@@ -74,6 +74,32 @@ SYNTAX: CD dirname
 - If a directory in the given path does not exist, it will output an error message saying ”the directory XXX in the given path does not exist” where XXX is the name of the missing directory.
 - If a directory with the given name with the given path exists, it will give an error message saying ”the directory already exists”.
 
+### Remove a directory
+
+SYNTAX: DD dirname
+
+- This command will remove the directory at the path indicated by dirname.
+- The dirname will be an absolute path.
+- This is a recursive operation, it should remove everything inside the directory from the file system.
+- If a directory in the given path does not exist, it will output an error message saying ”the directory XXX in the given path does not exist” where XXX is the name of the missing directory.
+- If a directory with the given name at the given path does not exist, it will give an error message saying ”the directory does not exist”.
+
+### List all files
+
+SYNTAX: LL
+
+- This command will list all the files/directories on the hard disk along with their sizes.
+- Each file/directory will be listed on a separate line with a space between the name and the size (in bytes).
+
+## Input
+
+- Program will take a command line argument which will be a file containing the commands to be executed as given in the sampleinput.txt.
+- It will read the commands and execute them one by one.
+- It is assumed that the input will always be in the correct format.
+- After executing every command the program will update the state of the hard disk in a file called ”myfs” in the current directory.
+- When the program terminates, this file will contain the snapshot of the hard disk at the end of the program.
+- At the start of the program, it will look for a file titled ”myfs” in the current directory and will be able to read the hard disk state (if it was stored by the program). If it does not find the file titled ”myfs” in the current directory it will create an empty hard disk by formatting it according to the specified layout and creating the first root directory (/).
+
 
 
 
