@@ -38,6 +38,44 @@ SYNTAX: CR filename size
 
 SYNTAX: DL filename
 
+- This command will delete a file titled filename.
+- The filename will be an absolute path.
+- If a directory in the given path does not exist, it will output an error message saying ”the directory XXX in the given path does not exist” where XXX is the name of the missing directory.
+- If a file with a given pathname does not exist, it will give an error ”the file does not exist”.
+
+### Copy a File
+
+SYNTAX: CP srcname dstname
+
+- This command will copy a file titled srcname to a file titled dstname.
+- The srcname and dstname will be an absolute paths.
+- If there’s not enough space in the disk, it will output an error saying ”not enough space”, otherwise it will create a copy of the source file at the destination.
+- If a directory in the given paths does not exist, it will output an error message saying ”the directory XXX in the given path does not exist” where XXX is the name of the missing directory.
+- If a file with a given pathname already exist, it will overwrite it.
+- If either srcname or dstname is a directory, it will give an error saying ”can’t handle directories”.
+
+### Move a file
+
+SYNTAX: MV srcname dstname
+
+- This command will move a file titled srcname to a file titled dstname.
+- The srcname and dstname will be an absolute paths.
+- This command will not fail due to space limitations if the source and destination files are of the same size.
+- If a directory in the given paths does not exist, it will output an error message saying ”the directory XXX in the given path does not exist” where XXX is the name of the missing directory.
+- If a file with a given pathname already exists, it will overwrite it.
+- If either srcname or dstname is a directory, it will give an error saying ”can’t handle directories”.
+
+### Create a directory
+
+SYNTAX: CD dirname
+
+- This command will create an empty directory at the path indicated by dirname.
+- The dirname will be an absolute path.
+- If a directory in the given path does not exist, it will output an error message saying ”the directory XXX in the given path does not exist” where XXX is the name of the missing directory.
+- If a directory with the given name with the given path exists, it will give an error message saying ”the directory already exists”.
+
+
+
 --- 
 
 **Contributions**: All of the code in this repository is written by [Huzaifah Tariq Ahmed](https://github.com/huzaifahtariqahmed). 
