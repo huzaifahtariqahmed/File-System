@@ -21,6 +21,22 @@ The disk layout1 is as follows:
 - Inodes can contain metadata about a file or a directory. The contents of a directory are the a series of directory entries comprising of dirent structures (see filesystem.c).
 - The file or directory names can be a maximum of 8 characters including the NULL character.
 
+## File System Commands Implemented
+
+### Create a File
+
+SYNTAX: CR filename size
+
+- This command creates a file titled filename of the given size.
+- The filename will be an absolute path.
+- If there’s not enough space in the disk, it will output an error saying ”not enough space”
+- Otherwise it will create a file of the required size filling the file content with small alphabets [a-z] repeated.
+- If a directory in the given path does not exist, it will output an error message saying ”the directory XXX in the given path does not exist” where XXX is the name of the missing directory.
+- If a file with a given pathname already exist, it will give an error ”the file already exists”.
+
+### Delete a File
+
+SYNTAX: DL filename
 
 --- 
 
