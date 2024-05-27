@@ -1,0 +1,8 @@
+CD /home
+CD /home/csvtest
+CR /home/file1 128
+CR /home/user/file2 512
+CP /home/file1 /home/user/file3
+DL /home/file1
+CD /home/user2
+LL
