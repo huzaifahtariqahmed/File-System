@@ -100,10 +100,6 @@ SYNTAX: LL
 - When the program terminates, this file will contain the snapshot of the hard disk at the end of the program.
 - At the start of the program, it will look for a file titled ”myfs” in the current directory and will be able to read the hard disk state (if it was stored by the program). If it does not find the file titled ”myfs” in the current directory it will create an empty hard disk by formatting it according to the specified layout and creating the first root directory (/).
 
-
-
-
-
 --- 
 
 **Contributions**: All of the code in this repository is written by [Huzaifah Tariq Ahmed](https://github.com/huzaifahtariqahmed). 
